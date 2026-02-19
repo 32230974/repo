@@ -1,0 +1,117 @@
+.footer {
+  background: #020c1b;
+  padding: 3rem 2rem 1.5rem;
+  position: relative;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.back-to-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: rgba(100, 255, 218, 0.1);
+  border: 1px solid #64ffda;
+  border-radius: 50%;
+  color: #64ffda;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 0 auto 2rem;
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  background: #64ffda;
+  color: #0a192f;
+  transform: translateY(-5px);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #233554;
+  margin-bottom: 1.5rem;
+}
+
+.footer-brand h3 {
+  color: #64ffda;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Fira Code', monospace;
+}
+
+.footer-brand p {
+  color: #8892b0;
+  font-size: 0.9rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: rgba(100, 255, 218, 0.05);
+  border: 1px solid #233554;
+  border-radius: 10px;
+  color: #ccd6f6;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: #64ffda;
+  border-color: #64ffda;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(100, 255, 218, 0.1);
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #8892b0;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.heart-icon {
+  color: #ff6b6b;
+  animation: heartbeat 1.5s ease infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.footer-year {
+  margin-top: 0.5rem;
+  font-size: 0.8rem !important;
+  color: #4a5568 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}

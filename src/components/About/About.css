@@ -1,0 +1,111 @@
+.about {
+  padding: 6rem 2rem;
+  background: #0a0a0a;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.about-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #e6f1ff;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #233554;
+  max-width: 300px;
+}
+
+.title-number {
+  color: #64ffda;
+  font-family: 'Fira Code', monospace;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.about-text p {
+  color: #8892b0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+.highlight {
+  color: #64ffda;
+  font-weight: 600;
+}
+
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.highlight-card {
+  background: linear-gradient(135deg, #112240, #1a1a2e);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #233554;
+  transition: all 0.3s ease;
+  animation: fadeInRight 0.6s ease forwards;
+  opacity: 0;
+}
+
+.highlight-card:hover {
+  transform: translateX(10px);
+  border-color: #64ffda;
+  box-shadow: 0 10px 30px rgba(100, 255, 218, 0.05);
+}
+
+.highlight-icon {
+  color: #64ffda;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.highlight-card h3 {
+  color: #e6f1ff;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-card p {
+  color: #8892b0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+}

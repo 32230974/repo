@@ -1,0 +1,94 @@
+.skills {
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, #0a0a0a 0%, #0a192f 100%);
+}
+
+.skills-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.skills-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.skill-category {
+  background: linear-gradient(135deg, #112240, #1a1a2e);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #233554;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  border-color: #64ffda;
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.category-title {
+  color: #64ffda;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #233554;
+  font-family: 'Fira Code', monospace;
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.skill-name {
+  color: #ccd6f6;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.skill-percentage {
+  color: #64ffda;
+  font-size: 0.85rem;
+  font-family: 'Fira Code', monospace;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 8px;
+  background: #233554;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #64ffda, #00d4aa);
+  border-radius: 10px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
